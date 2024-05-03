@@ -1,0 +1,22 @@
+package com.example.demo.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class HelloController {
+	
+	public HelloController() {
+		System.out.println("HelloController의 기본생성자");
+	}
+	
+	@GetMapping(value="kim")
+	@ResponseBody
+	public String hello(String name) {
+		return "안녕하세요" + name + "님";
+		
+	}
+	
+	
+}

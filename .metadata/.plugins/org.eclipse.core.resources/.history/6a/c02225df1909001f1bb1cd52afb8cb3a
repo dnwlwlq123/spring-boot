@@ -1,0 +1,5 @@
+spring.application.name=Chapter02MySQL
+
+#JSP
+spring.mvc.view.prefix=/WEB-INF/
+spring.mvc.view.suffix=.jsp
