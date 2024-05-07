@@ -43,7 +43,7 @@ public class UserController {
 		model.addAttribute("pg", pg);
 		return "user/list";
 	}
-	@PostMapping(value="getUserList")
+	@PostMapping(value="getUserList")	
 	@ResponseBody
 	public Map<String,Object> getUserList(@RequestParam(value="pg") String pg) {
 		return userService.getUserList(pg);
