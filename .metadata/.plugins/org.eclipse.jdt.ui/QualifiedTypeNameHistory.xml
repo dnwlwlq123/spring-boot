@@ -14,9 +14,6 @@
     <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
     <fullyQualifiedTypeName name="org.mybatis.spring.annotation.MapperScan"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
-    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.CreationTimestamp"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
@@ -24,6 +21,14 @@
     <fullyQualifiedTypeName name="com.example.demo.BoardService"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Column"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.domain.EntityScan"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.config.EnableJpaRepositories"/>
 </qualifiedTypeNameHistroy>
