@@ -12,5 +12,4 @@ public interface UserUploadService {
 
     public List<UserUploadDTO> getUploadList();
 
-    UserUploadDTO getUploadImage(int seq);
 }

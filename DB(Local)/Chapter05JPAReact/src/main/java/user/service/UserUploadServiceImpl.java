@@ -25,9 +25,4 @@ public class UserUploadServiceImpl implements UserUploadService{
         return userUploadDAO.findAllByOrderBySeqDesc(); //쿼리메소드 - seq로 내림차순
     }
 
-    @Override
-    public UserUploadDTO getUploadImage(int seq) {
-        return userUploadDAO.findBySeq(seq); //쿼리메소드
-    }
-
 }

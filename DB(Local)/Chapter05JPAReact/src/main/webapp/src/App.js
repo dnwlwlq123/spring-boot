@@ -6,7 +6,6 @@ import List from './user/List';
 import UpdateForm from './user/UpdateForm';
 import UploadForm from './user/UploadForm';
 import UploadList from './user/UploadList';
-import UploadUpdateForm from './user/UploadUpdateForm';
 
 
 
@@ -26,7 +25,6 @@ function App() {
             <Route path='updateForm/:userId' element={<UpdateForm/>}/>
             <Route path='uploadForm' element={<UploadForm/>}/>
             <Route path='uploadList' element={<UploadList/>}/>
-            <Route path='uploadUpdateForm/:seq' element={<UploadUpdateForm/>}/>
             </Route>
           </Routes>
         </>

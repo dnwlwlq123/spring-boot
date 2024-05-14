@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "user.*", "spring.conf"})
+@ComponentScan(basePackages = { "user.*"})
 @EntityScan("user.bean")
 @EnableJpaRepositories("user.dao")
 public class Chapter05JpaReactApplication {

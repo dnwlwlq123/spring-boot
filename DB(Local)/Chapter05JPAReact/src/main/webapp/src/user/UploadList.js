@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const UploadList = () => {  
     const [list, setList] = useState([])
@@ -34,14 +33,11 @@ const UploadList = () => {
             {
                 list.map(item => <tr key={item.seq} style={{textAlign: 'center'}}>
                     <td>{item.seq}</td>
-                    <td>
-                        <Link to={`/user/uploadUpdateForm/${item.seq}`}><img src={`https://kr.object.ncloudstorage.com/bitcamp-6th-bucket-80/storage/${item.imageFileName}`} alt={item.imageName}
-                        style={{width: '70px', height: '70px'}}/>
-                        </Link>
-                    </td>
+                    <td><img src={`../storage/${item.imageOriginalFileName}`} alt={item.imageName}
+                    style={{width: '70px', height: '70px'}}/></td>
                     <td>{item.imageName}</td>
-                </tr>
-                )}
+                </tr>)
+            }
           </tbody>
           <tfoot>
 

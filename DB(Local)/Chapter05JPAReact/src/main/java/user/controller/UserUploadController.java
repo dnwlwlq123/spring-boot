@@ -5,13 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import user.bean.UserUploadDTO;
-import user.service.ObjectStorageService;
 import user.service.UserUploadService;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,14 +17,9 @@ import java.util.List;
 @RequestMapping(path="user")
 public class UserUploadController {
     @Autowired
-    private ObjectStorageService objectStorageService;
-
-    private String bucketName = "bitcamp-6th-bucket-80";
-
-    @Autowired
     private UserUploadService userUploadService;
-
     @PostMapping(path="upload")
+
     public void upload(@RequestPart UserUploadDTO userUploadDTO,
                        @RequestPart("img") List<MultipartFile> list,
                        HttpSession session){
@@ -46,20 +38,13 @@ public class UserUploadController {
 
         for(MultipartFile img : list){
             originalFileName = img.getOriginalFilename();
-            fileName = objectStorageService.uploadFile(bucketName, "storage/", img);  //UUID
+            fileName = "none";  //UUID
             file = new File(filePath, originalFileName); //파일 생성
             try {
                 img.transferTo(file);
             } catch(IOException e){
                 e.printStackTrace();
             }
-//            try {
-//                result += "<span><img src='/mini/storage/" +
-//                        URLEncoder.encode(originalFileName, "UTF-8") +  "'/></span>";
-//            } catch (UnsupportedEncodingException e) {
-//                // TODO Auto-generated catch block
-//                e.printStackTrace();
-//            }
             UserUploadDTO dto = new UserUploadDTO();
             dto.setImageName(userUploadDTO.getImageName());
             dto.setImageContent(userUploadDTO.getImageContent());
@@ -76,10 +61,5 @@ public class UserUploadController {
     @GetMapping(path="getUploadList")
     public List<UserUploadDTO> getUploadList() {
         return userUploadService.getUploadList();
-    }
-
-    @GetMapping(path="getUploadImage")
-    public UserUploadDTO getUploadImage(@RequestParam("seq") int seq){
-        return userUploadService.getUploadImage(seq);
     }
 }

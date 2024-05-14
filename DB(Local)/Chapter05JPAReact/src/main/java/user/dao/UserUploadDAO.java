@@ -10,6 +10,4 @@ import java.util.List;
 public interface UserUploadDAO extends JpaRepository<UserUploadDTO, Integer> {
 
     public List<UserUploadDTO> findAllByOrderBySeqDesc();
-
-    public UserUploadDTO findBySeq(int seq);
 }
